@@ -1,0 +1,711 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+:where(ul[class]) {
+    list-style: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+}
+
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+img,
+video {
+    display: block;
+    height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+a:where([class]) {
+    display: inline-flex;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+:where([fill]:not([fill="none"],
+        [fill^="url"])) {
+    fill: currentColor;
+}
+
+:where([stroke]:not([stroke="none"],
+        [stroke^="url"])) {
+    stroke: currentColor;
+}
+
+svg * {
+    transition-property: fill, stroke;
+}
+
+:where(table) {
+    border-collapse: collapse;
+    border-color: currentColor;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif !important;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 40px;
+    color: #333333;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #555555;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #555555;
+}
+
+p {
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.container {
+    width: 100%;
+    background: linear-gradient(to top, #EEF7FF 52%, #ffffff 52%);
+}
+
+.advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 80px 40px 70px 40px;
+    min-height: 750px;
+    gap: 100px;
+    align-items: right;
+}
+
+.advantages-slider {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.advantages-text {
+    padding: 40px 0 40px;
+}
+
+.advantages-rowList {
+    display: flex;
+    flex: 1;
+    padding-top: 60px;
+    gap: 50px;
+}
+
+.advantages-listContainer {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.advantages-listNumber h2 {
+    color: #DC0306;
+}
+
+.advantages-listText {}
+
+button {
+    background-color: #DC0306;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 20px 40px;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    background-color: white;
+    border: 0;
+}
+
+.slides {
+    display: flex;
+    width: 600px;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    position: relative;
+}
+
+.slide:nth-child(1) {
+    background-position: center center;
+    background-size: cover;
+    background-image: url('images/img1.png');
+}
+
+.slide:nth-child(2) {
+    background-position: center top;
+    background-size: cover;
+    background-image: url('images/img2.jpg');
+}
+
+.slide:nth-child(3) {
+    background-position: center center;
+    background-size: cover;
+    background-image: url('images/img3.jpg');
+}
+
+.buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.nav button {
+    background-color: transparent;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+
+    .container {
+        width: 100%;
+        background: linear-gradient(to top, #EEF7FF 52%, #ffffff 52%);
+    }
+
+    .advantages-slider {
+        max-height: 700px;
+    }
+
+    .slider-container {
+        height: 700px;
+    }
+
+}
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+        background: linear-gradient(to top, #EEF7FF 55%, #ffffff 65%);
+    }
+
+    .advantages {
+        padding: 40px;
+        gap: 40px;
+        min-height: 500px;
+    }
+
+    .advantages-slider {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .advantages-text {
+        padding: 20px 0 0px;
+    }
+
+    .advantages-rowList {
+        padding-top: 30px;
+        gap: 20px;
+    }
+
+    .advantages-listContainer {
+        gap: 20px;
+    }
+
+    button {
+        padding: 20px 30px;
+    }
+
+    .slider-container {
+        width: 500px;
+        height: 500px;
+    }
+
+    .slides {
+        width: 500px;
+    }
+
+    .slide {
+        min-width: 500px;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .nav {
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 100%;
+        background: linear-gradient(to top, #EEF7FF 55%, #ffffff 65%);
+    }
+
+    .advantages {
+        padding: 40px;
+        gap: 30px;
+        min-height: 500px;
+    }
+
+    .advantages-slider {
+        max-width: 450px;
+        max-height: 600px;
+    }
+
+    .advantages-text {
+        padding: 20px 0 0px;
+    }
+
+    .advantages-rowList {
+        padding-top: 30px;
+        gap: 20px;
+    }
+
+    .advantages-listContainer {
+        gap: 20px;
+    }
+
+    button {
+        padding: 20px 30px;
+    }
+
+    .slider-container {
+        width: 450px;
+        height: 600px;
+    }
+
+    .slides {
+        width: 450px;
+    }
+
+    .slide {
+        min-width: 450px;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .nav {
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 30px;
+        color: #333333;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 100%;
+        background: none;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .advantages-title {
+        padding: 0 20px;
+    }
+
+    .advantages-text {
+        padding: 20px 20px 20px;
+    }
+
+    .advantages-rowList {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px 20px 0px;
+        gap: 30px;
+    }
+
+    .advantages-rowList:last-child {
+        padding: 30px 20px 30px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .nav {
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .advantages-slider {
+        max-width: 100%;
+        max-height: 600px;
+    }
+
+    .slider-container {
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        background-color: white;
+        border: 0;
+    }
+
+    .slides {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        max-width: 992px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        color: #333333;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 100%;
+        background: none;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .advantages-title {
+        padding: 0 20px;
+    }
+
+    .advantages-text {
+        padding: 20px 20px 20px;
+    }
+
+    .advantages-rowList {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px 20px 0px;
+        gap: 30px;
+    }
+
+    .advantages-rowList:last-child {
+        padding: 30px 20px 30px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .nav {
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .advantages-slider {
+        max-width: 100%;
+        max-height: 600px;
+    }
+
+    .slider-container {
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        background-color: white;
+        border: 0;
+    }
+
+    .slides {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        max-width: 768px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        position: relative;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 26px;
+        color: #333333;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        background: none;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .advantages-title {
+        padding: 0 20px;
+    }
+
+    .advantages-text {
+        padding: 20px 20px 20px;
+    }
+
+    .advantages-rowList {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px 20px 0px;
+        gap: 30px;
+    }
+
+    .advantages-rowList:last-child {
+        padding: 30px 20px 30px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .nav {
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .slider-container {
+        width: 100%;
+        max-height: 500px;
+    }
+}

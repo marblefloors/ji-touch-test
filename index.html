@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.css" rel="stylesheet">
+    <title>Carousel</title>
+</head>
+
+<body>
+    <main class="content">
+        <div class="container">
+            <section class="advantages">
+                <div class="advantages-slider">
+                    <div class="slider-container" autoplay="1">
+                        <div class="slides" id="slides">
+                            <div class="slide">
+                                <div class="buttons">
+                                    <button onclick="register()">Записаться онлайн</button>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="buttons">
+                                    <button onclick="watch()">Наши мастера</button>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="buttons">
+                                    <button onclick="read()">Отзывы клиентов</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <button onclick="prevSlide()"><img src="images/arrowLeft.png" alt=""></button>
+                            <button onclick="nextSlide()"><img src="images/arrowRight.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantages-description">
+                    <h1 class="advantages-title">Почему выбирают именно нас?</h1>
+                    <p class="advantages-text">Мы&nbsp;не&nbsp;просто создаём иллюзию работы, а&nbsp;действительно
+                        выполняем&nbsp;её, гарантируя&nbsp;безупречный результат и&nbsp;предоставляя
+                        гарантии.<br><br>После завершения всех процедур в&nbsp;нашем детейлинг-центре, ваш
+                        автомобиль&nbsp;будет&nbsp;выглядеть как&nbsp;новый.</p>
+                    <div class="advantages-rowList">
+                        <div class="advantages-listContainer">
+                            <div class="advantages-listNumber">
+                                <h2>01</h2>
+                            </div>
+                            <div class="advantages-listText">
+                                <h2>Команда профессионалов</h2>
+                                <h3 style="padding-top: 20px;">Работаем с&nbsp;2010&nbsp;года, все мастера имеют
+                                    соответствующую аттестацию.</h3>
+                            </div>
+                        </div>
+                        <div class="advantages-listContainer">
+                            <div class="advantages-listNumber">
+                                <h2>02</h2>
+                            </div>
+                            <div class="advantages-listText">
+                                <h2>Честная смета</h2>
+                                <h3 style="padding-top: 20px;">После первичной консультации озвучиваем стоимость наших
+                                    услуг.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages-rowList">
+                        <div class="advantages-listContainer">
+                            <div class="advantages-listNumber">
+                                <h2>03</h2>
+                            </div>
+                            <div class="advantages-listText">
+                                <h2>Договор и&nbsp;гарантии</h2>
+                                <h3 style="padding-top: 20px;">Заключаем договор, даём 3&nbsp;года гарантии на&nbsp;свои
+                                    работы.</h3>
+                            </div>
+                        </div>
+                        <div class="advantages-listContainer">
+                            <div class="advantages-listNumber">
+                                <h2>04</h2>
+                            </div>
+                            <div class="advantages-listText">
+                                <h2>Оплата по&nbsp;факту</h2>
+                                <h3 style="padding-top: 20px;">Наличная и&nbsp;безналичная формы оплаты после завершения
+                                    всех работ.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
